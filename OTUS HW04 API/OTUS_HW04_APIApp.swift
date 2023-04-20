@@ -12,6 +12,8 @@ struct OTUS_HW04_APIApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(Router())
+                .environmentObject(NewsAPIViewModel())
         }
     }
 }

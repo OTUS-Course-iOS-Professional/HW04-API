@@ -11,6 +11,19 @@
 		BD45B1F829F1B95F002286C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45B1F729F1B95F002286C4 /* ContentView.swift */; };
 		BD45B1FA29F1B961002286C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD45B1F929F1B961002286C4 /* Assets.xcassets */; };
 		BD45B1FD29F1B961002286C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD45B1FC29F1B961002286C4 /* Preview Assets.xcassets */; };
+		BD45B20B29F1C02D002286C4 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45B20A29F1C02D002286C4 /* AboutScreen.swift */; };
+		BD45B20D29F1C067002286C4 /* LicensesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45B20C29F1C067002286C4 /* LicensesScreen.swift */; };
+		BD45B21029F1C131002286C4 /* NewsListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45B20F29F1C131002286C4 /* NewsListScreen.swift */; };
+		BD45B21229F1C198002286C4 /* NewsAPIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45B21129F1C198002286C4 /* NewsAPIViewModel.swift */; };
+		BD45B21829F1C397002286C4 /* NewsAPI in Frameworks */ = {isa = PBXBuildFile; productRef = BD45B21729F1C397002286C4 /* NewsAPI */; };
+		BD45B21A29F1C40E002286C4 /* ArticleCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45B21929F1C40E002286C4 /* ArticleCellView.swift */; };
+		BD45B21D29F1C4E3002286C4 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45B21C29F1C4E3002286C4 /* Collection.swift */; };
+		BD45B21F29F1C527002286C4 /* Article+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45B21E29F1C527002286C4 /* Article+Identifiable.swift */; };
+		BD45B22129F1C642002286C4 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45B22029F1C642002286C4 /* ArticleDetailView.swift */; };
+		BD45B22329F1C698002286C4 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45B22229F1C698002286C4 /* NavigationController.swift */; };
+		BD45B22529F1C6DB002286C4 /* ArticleMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45B22429F1C6DB002286C4 /* ArticleMetaData.swift */; };
+		BD45B22729F1C752002286C4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45B22629F1C752002286C4 /* Router.swift */; };
+		BD45B22B29F1C800002286C4 /* MetaWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45B22A29F1C800002286C4 /* MetaWeatherViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +32,19 @@
 		BD45B1F729F1B95F002286C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BD45B1F929F1B961002286C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD45B1FC29F1B961002286C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BD45B20A29F1C02D002286C4 /* AboutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
+		BD45B20C29F1C067002286C4 /* LicensesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensesScreen.swift; sourceTree = "<group>"; };
+		BD45B20F29F1C131002286C4 /* NewsListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListScreen.swift; sourceTree = "<group>"; };
+		BD45B21129F1C198002286C4 /* NewsAPIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPIViewModel.swift; sourceTree = "<group>"; };
+		BD45B21629F1C375002286C4 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
+		BD45B21929F1C40E002286C4 /* ArticleCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCellView.swift; sourceTree = "<group>"; };
+		BD45B21C29F1C4E3002286C4 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		BD45B21E29F1C527002286C4 /* Article+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Article+Identifiable.swift"; sourceTree = "<group>"; };
+		BD45B22029F1C642002286C4 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
+		BD45B22229F1C698002286C4 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		BD45B22429F1C6DB002286C4 /* ArticleMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleMetaData.swift; sourceTree = "<group>"; };
+		BD45B22629F1C752002286C4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		BD45B22A29F1C800002286C4 /* MetaWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaWeatherViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD45B21829F1C397002286C4 /* NewsAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,8 +62,10 @@
 		BD45B1E929F1B95F002286C4 = {
 			isa = PBXGroup;
 			children = (
+				BD45B21629F1C375002286C4 /* Networking */,
 				BD45B1F429F1B95F002286C4 /* OTUS HW04 API */,
 				BD45B1F329F1B95F002286C4 /* Products */,
+				BD45B20729F1BF5E002286C4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,10 +80,16 @@
 		BD45B1F429F1B95F002286C4 /* OTUS HW04 API */ = {
 			isa = PBXGroup;
 			children = (
+				BD45B23A29F1C96A002286C4 /* Screens */,
+				BD45B23929F1C938002286C4 /* ViewModels */,
+				BD45B21B29F1C4BA002286C4 /* Extensions */,
+				BD45B20E29F1C112002286C4 /* News */,
 				BD45B1F529F1B95F002286C4 /* OTUS_HW04_APIApp.swift */,
 				BD45B1F729F1B95F002286C4 /* ContentView.swift */,
 				BD45B1F929F1B961002286C4 /* Assets.xcassets */,
 				BD45B1FB29F1B961002286C4 /* Preview Content */,
+				BD45B22229F1C698002286C4 /* NavigationController.swift */,
+				BD45B22629F1C752002286C4 /* Router.swift */,
 			);
 			path = "OTUS HW04 API";
 			sourceTree = "<group>";
@@ -65,6 +100,51 @@
 				BD45B1FC29F1B961002286C4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BD45B20729F1BF5E002286C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD45B20E29F1C112002286C4 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				BD45B21929F1C40E002286C4 /* ArticleCellView.swift */,
+				BD45B22029F1C642002286C4 /* ArticleDetailView.swift */,
+				BD45B22429F1C6DB002286C4 /* ArticleMetaData.swift */,
+				BD45B20F29F1C131002286C4 /* NewsListScreen.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		BD45B21B29F1C4BA002286C4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BD45B21C29F1C4E3002286C4 /* Collection.swift */,
+				BD45B21E29F1C527002286C4 /* Article+Identifiable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BD45B23929F1C938002286C4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BD45B21129F1C198002286C4 /* NewsAPIViewModel.swift */,
+				BD45B22A29F1C800002286C4 /* MetaWeatherViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BD45B23A29F1C96A002286C4 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				BD45B20A29F1C02D002286C4 /* AboutScreen.swift */,
+				BD45B20C29F1C067002286C4 /* LicensesScreen.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +163,9 @@
 			dependencies = (
 			);
 			name = "OTUS HW04 API";
+			packageProductDependencies = (
+				BD45B21729F1C397002286C4 /* NewsAPI */,
+			);
 			productName = "OTUS HW04 API";
 			productReference = BD45B1F229F1B95F002286C4 /* OTUS HW04 API.app */;
 			productType = "com.apple.product-type.application";
@@ -137,8 +220,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD45B22329F1C698002286C4 /* NavigationController.swift in Sources */,
+				BD45B21229F1C198002286C4 /* NewsAPIViewModel.swift in Sources */,
+				BD45B21A29F1C40E002286C4 /* ArticleCellView.swift in Sources */,
 				BD45B1F829F1B95F002286C4 /* ContentView.swift in Sources */,
+				BD45B20D29F1C067002286C4 /* LicensesScreen.swift in Sources */,
 				BD45B1F629F1B95F002286C4 /* OTUS_HW04_APIApp.swift in Sources */,
+				BD45B21029F1C131002286C4 /* NewsListScreen.swift in Sources */,
+				BD45B20B29F1C02D002286C4 /* AboutScreen.swift in Sources */,
+				BD45B21D29F1C4E3002286C4 /* Collection.swift in Sources */,
+				BD45B22529F1C6DB002286C4 /* ArticleMetaData.swift in Sources */,
+				BD45B22129F1C642002286C4 /* ArticleDetailView.swift in Sources */,
+				BD45B21F29F1C527002286C4 /* Article+Identifiable.swift in Sources */,
+				BD45B22B29F1C800002286C4 /* MetaWeatherViewModel.swift in Sources */,
+				BD45B22729F1C752002286C4 /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +434,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD45B21729F1C397002286C4 /* NewsAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NewsAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD45B1EA29F1B95F002286C4 /* Project object */;
 }
