@@ -9,24 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @EnvironmentObject var router: Router
-    
     var body: some View {
-        TabView(selection: $router.tabSelection) {
-            NewsListScreen()
-                .tabItem {
-                    Image(systemName: "newspaper")
-                    Text("Новости")
-                }
-                .tag(0)
-            
-            AboutScreen()
-                .tabItem {
-                    Image(systemName: "info.circle")
-                    Text("О приложении")
-                }
-                .tag(1)
-        }
+        NewsScreen()
     }
 }
 

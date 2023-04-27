@@ -9,11 +9,19 @@ import SwiftUI
 
 @main
 struct OTUS_HW04_APIApp: App {
+    private let token = "342e3cc3296f4435bb6d0eb353bfedf5"
+    init() {
+        ServiceLocator.shared.add(
+            service: NewsAPIService(token: token)
+        )
+        ServiceLocator.shared.add(
+            service: NewsTopicsService()
+        )
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(Router())
-                .environmentObject(NewsAPIViewModel())
         }
     }
 }

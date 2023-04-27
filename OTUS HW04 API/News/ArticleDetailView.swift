@@ -9,12 +9,19 @@ import SwiftUI
 import NewsAPI
 
 struct ArticleDetailView: View {
-    
     @EnvironmentObject var navigationController: NavControllerViewModel
     var article: Article
     
     var body: some View {
         VStack {
+            HStack {
+                Button(action: {navigationController.pop()}) {
+                    Image(systemName: "arrow.backward")
+                }.padding(.vertical)
+                
+                Spacer()
+            }
+            
             Text(article.title ?? "")
                 .font(.title)
             Text(article.description ?? "")
@@ -25,15 +32,12 @@ struct ArticleDetailView: View {
                         ArticleMetaData(article: article)
                     )
             }) {
-                Text("Мета данные")
+                Text("Meta data")
             }
-            
-            Button(action: {navigationController.pop()}) {
-                Text("Назад")
-            }.padding(.vertical)
             
             Spacer()
         }
         .padding()
     }
 }
+

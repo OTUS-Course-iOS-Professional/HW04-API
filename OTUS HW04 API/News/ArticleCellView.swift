@@ -9,7 +9,6 @@ import SwiftUI
 import NewsAPI
 
 struct ArticleCellView: View {
-    
     @EnvironmentObject var news: NewsAPIViewModel
     var article: Article
     

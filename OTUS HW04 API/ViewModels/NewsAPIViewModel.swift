@@ -7,80 +7,82 @@
 
 import Foundation
 import NewsAPI
+import Combine
 
-struct ArticleQueryParams {
-    var query: String
-    var fromDate: Date?
-    var toDate: Date?
-    var sortBy: ArticleSort
-    var language: String?
-}
+import Foundation
+import Combine
+import NewsAPI
 
 class NewsAPIViewModel: ObservableObject {
-    static var newsApiToken = "342e3cc3296f4435bb6d0eb353bfedf5"
+    @Injected private var newsService: NewsAPIService
+    @Injected private var topicsService: NewsTopicsService
+    
+    private var cancellables: Set<AnyCancellable> = .init()
     
     @Published private(set) var lastError: String = ""
     @Published private(set) var articles: [Article] = .init()
     @Published private(set) var isPageLoading: Bool = false
-    private(set) var queryParams: ArticleQueryParams = .init(
-        query: "WWDC",
-        sortBy: ArticleSort.publishedat,
-        language: "ru"
-    ) {
-        didSet {
-            page = 0
-            articles.removeAll()
-            loadPage()
-        }
-    }
-    private(set) var pageSize: Int = 10
-    private(set) var page: Int = 0
+    @Published private(set) var topics: [String] = []
     
     init() {
-        loadPage()
+        topicsService.$topicIndex.sink { newTopicIndex in
+            if newTopicIndex > -1 {
+                let newTopic = self.topicsService.topics?[newTopicIndex] ?? ""
+                self.setTopic(to: newTopic)
+            }
+        }
+        .store(in: &cancellables)
     }
     
-    func setTopic(to newTopic: String) {
-        guard queryParams.query != newTopic else {
+    deinit {
+        cancellables.forEach { cancellable in
+            cancellable.cancel()
+        }
+    }
+    
+    @available(iOS 15.0.0, *)
+    func reload() async {
+        guard !isPageLoading else {
             return
         }
-        queryParams.query = newTopic
+        newsService.setPage(page: 0)
+        
+        lastError = ""
+        do {
+            let articles = try await newsService.loadPage()
+            
+            DispatchQueue.main.async {
+                self.articles = articles
+            }
+        } catch {
+            DispatchQueue.main.async {
+                self.lastError = (error as! CustomError).description
+            }
+        }
     }
     
     func loadPage() {
-        guard isPageLoading == false else {
+        guard !isPageLoading else {
             return
         }
         lastError = ""
         isPageLoading = true
-        page += 1
-        NewsAPI.everythingGet(q: queryParams.query,
-                              sortBy: queryParams.sortBy,
-                              apiKey: NewsAPIViewModel.newsApiToken,
-                              from: queryParams.fromDate,
-                              to: queryParams.toDate,
-                              language: queryParams.language,
-                              page: page,
-                              pageSize: pageSize) { list, error in
-            
-            if let error = error {
-                self.lastError = error.localizedDescription
-                return
+        
+        newsService.loadPage { result in
+            switch result {
+            case .success(let articles):
+                self.articles.append(contentsOf: articles)
+            case .failure(let error):
+                self.lastError = error.description
             }
-            
-            if list?.status != "ok" {
-                self.lastError = "Ошибка загрузки данных"
-                return
-            }
-            
-            let displayArticles = list?.articles?.filter { article in
-                article.title != nil
-            } ?? []
-            
-            self.articles.append(contentsOf: displayArticles)
             self.isPageLoading = false
         }
     }
     
+    func setTopic(to newTopic: String) {
+        if newsService.setTopic(to: newTopic) {
+            articles = []
+            loadPage()
+        }
+    }
 }
-

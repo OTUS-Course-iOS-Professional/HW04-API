@@ -9,7 +9,6 @@ import SwiftUI
 import NewsAPI
 
 struct ArticleMetaData: View {
-    
     @EnvironmentObject var navigationController: NavControllerViewModel
     var article: Article
     
@@ -23,20 +22,26 @@ struct ArticleMetaData: View {
     
     var body: some View {
         VStack {
+            HStack {
+                Button(action: { navigationController.pop() }) {
+                    Image(systemName: "arrow.backward")
+                }
+                .padding(.vertical)
+                
+                Spacer()
+            }
+            
             Text(article.title ?? "No title")
                 .font(.title)
                 .padding(.bottom)
             
-            tableRow(title: "Автор", text: article.author)
-            tableRow(title: "Опубликовано", text: article.publishedAt)
-            
-            Button(action: { navigationController.pop() }) {
-                Text("Назад")
-            }.padding(.vertical)
+            tableRow(title: "Author", text: article.author)
+            tableRow(title: "Published at", text: article.publishedAt)
             
             Button(action: { navigationController.pop(to: .root) }) {
-                Text("К новостям")
+                Text("To the list")
             }
+            .padding(.vertical)
             
             Spacer()
         }
