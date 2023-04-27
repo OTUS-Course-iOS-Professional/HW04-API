@@ -23,7 +23,6 @@
 		BD45B22329F1C698002286C4 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45B22229F1C698002286C4 /* NavigationController.swift */; };
 		BD45B22529F1C6DB002286C4 /* ArticleMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45B22429F1C6DB002286C4 /* ArticleMetaData.swift */; };
 		BD45B22729F1C752002286C4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45B22629F1C752002286C4 /* Router.swift */; };
-		BD45B22B29F1C800002286C4 /* MetaWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45B22A29F1C800002286C4 /* MetaWeatherViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +43,6 @@
 		BD45B22229F1C698002286C4 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		BD45B22429F1C6DB002286C4 /* ArticleMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleMetaData.swift; sourceTree = "<group>"; };
 		BD45B22629F1C752002286C4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		BD45B22A29F1C800002286C4 /* MetaWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaWeatherViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				BD45B21129F1C198002286C4 /* NewsAPIViewModel.swift */,
-				BD45B22A29F1C800002286C4 /* MetaWeatherViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -232,7 +229,6 @@
 				BD45B22529F1C6DB002286C4 /* ArticleMetaData.swift in Sources */,
 				BD45B22129F1C642002286C4 /* ArticleDetailView.swift in Sources */,
 				BD45B21F29F1C527002286C4 /* Article+Identifiable.swift in Sources */,
-				BD45B22B29F1C800002286C4 /* MetaWeatherViewModel.swift in Sources */,
 				BD45B22729F1C752002286C4 /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
