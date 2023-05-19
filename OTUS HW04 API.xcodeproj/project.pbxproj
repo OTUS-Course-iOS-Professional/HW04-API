@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD166B272A180D0D00EFC4CF /* UserDefaultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD166B262A180D0D00EFC4CF /* UserDefaultsViewModel.swift */; };
 		BD45B1F629F1B95F002286C4 /* OTUS_HW04_APIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45B1F529F1B95F002286C4 /* OTUS_HW04_APIApp.swift */; };
 		BD45B1F829F1B95F002286C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45B1F729F1B95F002286C4 /* ContentView.swift */; };
 		BD45B1FA29F1B961002286C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD45B1F929F1B961002286C4 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD166B262A180D0D00EFC4CF /* UserDefaultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsViewModel.swift; sourceTree = "<group>"; };
 		BD45B1F229F1B95F002286C4 /* OTUS HW04 API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OTUS HW04 API.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD45B1F529F1B95F002286C4 /* OTUS_HW04_APIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTUS_HW04_APIApp.swift; sourceTree = "<group>"; };
 		BD45B1F729F1B95F002286C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD166B252A180CF400EFC4CF /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				BD166B262A180D0D00EFC4CF /* UserDefaultsViewModel.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 		BD45B1E929F1B95F002286C4 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +88,7 @@
 		BD45B1F429F1B95F002286C4 /* OTUS HW04 API */ = {
 			isa = PBXGroup;
 			children = (
+				BD166B252A180CF400EFC4CF /* Cache */,
 				BD45B23A29F1C96A002286C4 /* Screens */,
 				BD45B23929F1C938002286C4 /* ViewModels */,
 				BD45B21B29F1C4BA002286C4 /* Extensions */,
@@ -218,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD45B22329F1C698002286C4 /* NavigationController.swift in Sources */,
+				BD166B272A180D0D00EFC4CF /* UserDefaultsViewModel.swift in Sources */,
 				BD45B21229F1C198002286C4 /* NewsAPIViewModel.swift in Sources */,
 				BD45B21A29F1C40E002286C4 /* ArticleCellView.swift in Sources */,
 				BD45B1F829F1B95F002286C4 /* ContentView.swift in Sources */,

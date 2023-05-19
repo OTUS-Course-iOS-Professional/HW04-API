@@ -19,6 +19,7 @@ struct ArticleQueryParams {
 class NewsAPIViewModel: ObservableObject {
     static var newsApiToken = "342e3cc3296f4435bb6d0eb353bfedf5"
     
+    private var userDefaults: UserDefaultsViewModel = .init()
     @Published private(set) var lastError: String = ""
     @Published private(set) var articles: [Article] = .init()
     @Published private(set) var isPageLoading: Bool = false
@@ -48,6 +49,12 @@ class NewsAPIViewModel: ObservableObject {
     }
     
     func loadPage() {
+        
+        if let articles = userDefaults.getCachedArticles(params: queryParams) {
+            self.articles = articles
+            return
+        }
+        
         guard isPageLoading == false else {
             return
         }
